@@ -220,7 +220,7 @@ There are two types of keys:
 - **Host keys**: These keys are shared by all functions within the function app. When used as an API key, these allow access to any function within the function app.
 - **Function keys**: These keys apply only to the specific functions under which they are defined. When used as an API key, these only allow access to that function.
 
-Each key is named for reference, and there is a default key (named "default") at the function and host level. The **master key** is a default host key named "_master" that is defined for each function app and cannot be revoked. It provides administrative access to the runtime APIs. Using `"authLevel": "admin"` in the binding JSON will require this key to be presented on the request; any other key will result in a authorization failure.
+Each key is named for reference, and there is a default key (named "default") at the function and host level. The **master key** is a default host key named "_master" that is defined for each function app and cannot be revoked. It provides administrative access to the runtime APIs. Using `"authLevel": "admin"` in the binding JSON will require this key to be presented on the request; any other key will result in an authorization failure.
 
 > [!NOTE]
 > Due to the elevated permissions granted by the master key, you should not share this key with third parties or distribute it in native client applications. Exercise caution when choosing the admin authorization level.
