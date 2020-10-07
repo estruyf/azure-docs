@@ -658,7 +658,7 @@ The following code shows how to register a user-defined function using the JavaS
 ```javascript
 const container = client.database("myDatabase").container("myContainer");
 const udfId = "Tax";
-await container.userDefinedFunctions.create({
+await container.scripts.userDefinedFunctions.create({
     id: udfId,
     body: require(`../js/${udfId}`)
 ```
